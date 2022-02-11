@@ -1,0 +1,35 @@
+@use 'global' as *;
+
+.p-fv__img {
+  padding-top: calc((276/335)*100%);
+  position: relative;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+.p-fv__img > img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.p-fv__title {
+  font-size: rem(30);
+  font-weight: 400;
+  letter-spacing: .06em;
+  line-height: calc(36/30);
+  margin-top: rem(20);
+}
+
+.p-fv__sub-title {
+  font-size: rem(16);
+  line-height: calc(24/16);
+  margin-top: rem(6);
+}
+
+.p-fv__button {
+  margin-top: rem(20);
+}

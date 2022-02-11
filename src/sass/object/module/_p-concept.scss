@@ -1,0 +1,37 @@
+@use 'global' as *;
+
+.p-concept__img {
+  padding-top: calc((291/335)*100%);
+  position: relative;
+}
+
+.p-concept__img > img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.p-concept__textarea {
+  background-color: $white;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, .07);
+  margin: rem(-14) rem(10) 0;
+  padding: rem(25);
+  z-index: 2;
+}
+
+.p-concept__text-wrap {
+  margin-top: rem(23);
+}
+
+.p-concept__text {
+  font-size: rem(14);
+  line-height: calc(21/14);
+}
+
+.p-concept__text + .p-concept__text {
+  margin-top: rem(20);
+}

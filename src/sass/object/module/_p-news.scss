@@ -1,0 +1,26 @@
+@use 'global' as *;
+
+.p-news__block {
+  margin-top: rem(45);
+}
+
+.p-news__item > a {
+  display: flex;
+  padding: rem(30) 0;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.p-news__title {
+  display: inline-block;
+  width: calc((92/335)*100%);
+}
+
+.p-news__title > time {
+  display: inline-block;
+  font-size: rem(14);
+  line-height: 1;
+}
+
+.p-news__button {
+  margin-top: rem(50);
+}

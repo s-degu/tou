@@ -1,0 +1,36 @@
+@use 'global' as *;
+
+.p-footer {
+  background-color: $gray;
+  color: $white;
+}
+
+.p-footer__items {
+  text-align: center;
+}
+
+.p-footer__item {
+  line-height: 1;
+}
+
+.p-footer__item + .p-footer__item {
+  margin-top: 30px;
+}
+
+.p-footer__item > a {
+  display: block;
+}
+
+.p-footer__right {
+  margin-top: rem(70);
+}
+
+.p-footer__copyright {
+  text-align: center;
+  margin-top: rem(50);
+}
+
+.p-footer__copyright > small {
+  display: inline-block;
+  line-height: 1;
+}

@@ -1,0 +1,19 @@
+@use 'global' as *;
+
+.p-footer-sns__items {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.p-footer-sns__item {
+  width: 40px;
+}
+
+.p-footer-sns__item + .p-footer-sns__item {
+  margin-left: 30px;
+}
+
+.p-footer-sns__item > a {
+  display: block;
+}

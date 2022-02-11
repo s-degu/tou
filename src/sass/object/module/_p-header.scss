@@ -7,6 +7,10 @@
 
 .p-header__logo {
   width: 70px;
+  @include mq("md") {
+    width: 101px;
+    margin-left: 155px;
+  }
 }
 
 .p-header__logo > a {
@@ -15,6 +19,9 @@
 
 .p-header__right {
   margin-left: auto;
+  @include mq("md") {
+    margin-right: 55px;
+  }
 }
 
 .p-header__items {

@@ -1,5 +1,9 @@
 @use 'global' as *;
 
+.p-product__inner {
+  padding-bottom: rem(100);
+}
+
 .p-product-cards__item + .p-product-cards__item {
   margin-top: rem(60);
 }

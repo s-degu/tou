@@ -1,0 +1,33 @@
+@use 'global' as *;
+
+.c-button {
+  background-color: $purple;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  padding: rem(22) 0;
+  padding-left: rem(25);
+  padding-right: rem(25);
+  position: relative;
+  width: 100%;
+  &::after {
+    background-image: url(../../../images/common/button-arrow.svg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: rem(6);
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(30);;
+  }
+}
+
+.c-button--more,
+.c-button--news-list {
+  @extend .c-button;
+  padding-left: rem(32.46);
+}

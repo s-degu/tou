@@ -1,0 +1,20 @@
+@use 'global' as *;
+
+.c-section-titile {
+  font-size: rem(24);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: calc(34/24);
+  padding-bottom: 13px;
+  position: relative;
+  &::after {
+    background-color: $purple;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 30px;
+  }
+}

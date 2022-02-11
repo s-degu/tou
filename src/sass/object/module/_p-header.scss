@@ -1,0 +1,30 @@
+@use 'global' as *;
+
+.p-header__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.p-header__logo {
+  width: 70px;
+}
+
+.p-header__logo > a {
+  display: block;
+}
+
+.p-header__right {
+  margin-left: auto;
+}
+
+.p-header__items {
+  display: flex;
+}
+
+.p-header__item > a {
+  display: block;
+}
+
+.p-header__item + .p-header__item {
+  margin-left: rem(20);
+}

@@ -1,5 +1,9 @@
 @use 'global' as *;
 
+.p-news__inner {
+  max-width: rem(990);
+}
+
 .p-news__block {
   margin-top: rem(26);
 }
@@ -13,6 +17,10 @@
 .p-news__title {
   display: inline-block;
   font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+    width: calc((147/940)*100%);
+  }
   line-height: 1;
   width: calc((92/335)*100%);
 }
@@ -24,10 +32,16 @@
 }
 
 .p-news__button {
+  @include mq("md") {
+    text-align: center;
+  }
   margin-top: rem(50);
 }
 
 .p-news__body {
   font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
   line-height: 1;
 }

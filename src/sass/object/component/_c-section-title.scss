@@ -7,6 +7,9 @@
   line-height: calc(34/24);
   padding-bottom: 14px;
   position: relative;
+  @include mq("md") {
+    font-size: rem(34);
+  }
   &::after {
     background-color: $purple;
     bottom: 0;

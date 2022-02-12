@@ -29,10 +29,10 @@ html {
 }
 @media screen and (min-width: 768px) {
   html {
-    font-size: 1.1111111111vw;
+    font-size: 1.4814814815vw;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1080px) {
   html {
     font-size: 16px;
   }
@@ -206,7 +206,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .l-inner {
-    max-width: 1490px;
+    max-width: 1130px;
     padding-right: 25px;
     padding-left: 25px;
   }
@@ -290,6 +290,10 @@ select::-ms-expand {
 .c-button--news {
   font-size: 14px;
   font-size: 0.875rem;
+  max-width: 320px;
+  max-width: 20rem;
+  text-align: left;
+  width: 100%;
 }
 .c-button--news::after {
   background-image: url(../../../images/arrow-news.svg);
@@ -325,6 +329,11 @@ select::-ms-expand {
   line-height: 1.4166666667;
   padding-bottom: 14px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .c-section-title {
+    font-size: 2.125rem;
+  }
 }
 .c-section-title::after {
   background-color: #8e8eae;
@@ -678,6 +687,11 @@ body {
   margin-left: 1.25rem;
 }
 
+.p-news__inner {
+  max-width: 990px;
+  max-width: 61.875rem;
+}
+
 .p-news__block {
   margin-top: 26px;
   margin-top: 1.625rem;
@@ -699,6 +713,12 @@ body {
   line-height: 1;
   width: 27.4626865672%;
 }
+@media screen and (min-width: 768px) {
+  .p-news__title {
+    font-size: 1rem;
+    width: 15.6382978723%;
+  }
+}
 
 .p-news__title > time {
   display: inline-block;
@@ -711,11 +731,21 @@ body {
   margin-top: 50px;
   margin-top: 3.125rem;
 }
+@media screen and (min-width: 768px) {
+  .p-news__button {
+    text-align: center;
+  }
+}
 
 .p-news__body {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .p-news__body {
+    font-size: 1rem;
+  }
 }
 
 .p-price {

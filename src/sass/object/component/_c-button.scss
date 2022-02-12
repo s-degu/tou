@@ -42,7 +42,9 @@
 }
 
 .c-button--flow {
+  max-width: rem(420);
   padding-left: rem(16);
+  width: 100%;
   &::after {
     right: 15.76px;
   }

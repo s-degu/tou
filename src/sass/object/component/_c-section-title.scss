@@ -3,13 +3,13 @@
 .c-section-title {
   font-size: rem(24);
   font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: calc(34/24);
-  padding-bottom: 14px;
-  position: relative;
   @include mq("md") {
     font-size: rem(34);
   }
+  letter-spacing: .04em;
+  line-height: calc(34/24);
+  padding-bottom: 14px;
+  position: relative;
   &::after {
     background-color: $purple;
     bottom: 0;
@@ -19,5 +19,14 @@
     position: absolute;
     transform: translateX(-50%);
     width: 30px;
+  }
+}
+
+.c-section-title--concept {
+  @include mq("md") {
+    &::after {
+      left: 0;
+      transform: translateY(0);
+    }
   }
 }

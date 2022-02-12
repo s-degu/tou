@@ -1,0 +1,44 @@
+@use 'global' as *;
+
+.p-cta {
+  background-color: #eaf0f9;
+  bottom: 0;
+  left: 0;
+  padding-bottom: rem(12);
+  padding-top: rem(12);
+  position: fixed;
+  right: 0;
+  z-index: 10;
+}
+
+.p-cta__link {
+  display: block;
+}
+
+.p-cta__block {
+  align-items: center;
+  display: flex;
+}
+
+.p-cta__img {
+  max-width: rem(54);
+  width: 100%;
+}
+
+.p-cta__text {
+  flex-grow: 1;
+  margin-left: rem(18);
+  position: relative;
+  &::after {
+    background-image: url(../../../images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 13px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+  }
+}

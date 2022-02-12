@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+body {
+  @include mq("md") {
+    padding-bottom: 0;
+  }
+  padding-bottom: 78px;
+}

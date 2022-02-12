@@ -6,7 +6,7 @@
 
 .p-flow__content {
   background-color: $white;
-  padding: rem(50) rem(37) rem(50) rem(38);
+  padding: rem(50) rem(10);
 }
 
 .p-flow__cards {
@@ -18,13 +18,19 @@
   font-family: $second-font-family;
   font-size: rem(70);
   line-height: 1;
+  display: inline-block;
+  padding-left: rem(27);
+}
+
+.p-flow-card__body {
+  padding: 16px 28px 0 27px;
 }
 
 .p-flow-card__img {
   margin-left: auto;
   margin-right: auto;
   max-width: rem(150);
-  padding-top: calc((150/260)*100%);
+  padding-top: calc((150/315)*100%);
   position: relative;
   width: 100%;
 }
@@ -35,34 +41,39 @@
   position: absolute;
   top: 0;
   width: 100%;
+  object-fit: cover;
 }
 
 .p-flow-card__title {
   font-size: rem(20);
   font-weight: 400;
   line-height: 1;
-  margin-top: rem(16);
+  // margin-top: rem(16);
   text-align: center;
 }
 
 .p-flow-card__text {
   font-size: rem(14);
   line-height: calc(21/14);
-  margin-top: rem(16);
+  margin-top: rem(15);
 }
 
 .p-flow__arrow-wrap {
-  margin: rem(30) 0;
+  margin: rem(38) 0 rem(30);
   text-align: center;
 }
 
 .p-flow__arrow {
   // text-align: center;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
   // border-style: solid;
-  border-top: 30px solid #8e8eae;
+  border-top: 22px solid #8e8eae;
   height: 0;
   margin: 0 auto;
   width: 0;
+}
+
+.p-flow__button {
+  margin-top: rem(62);
 }

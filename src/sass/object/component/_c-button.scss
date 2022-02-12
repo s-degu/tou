@@ -26,6 +26,39 @@
   }
 }
 
+.c-button--news,
+.c-button--detail {
+  padding: rem(17) 0 rem(17) rem(33);
+}
+
+.c-button--detail {
+  &::after {
+    background-image: url(../../../images/arrow-detail.svg);
+    background-size: cover;
+    height: 6.28px;
+    right: 31px;
+    width: 50px;
+  }
+}
+
+.c-button--flow {
+  padding-left: rem(16);
+  &::after {
+    right: 15.76px;
+  }
+}
+
+.c-button--news {
+  font-size: rem(14);
+  &::after {
+    background-image: url(../../../images/arrow-news.svg);
+    background-size: cover;
+    right: 32px;;
+    width: 77.91px;
+  }
+}
+
+
 .c-button--more,
 .c-button--news-list {
   @extend .c-button;

@@ -1,17 +1,19 @@
 @use 'global' as *;
 
 .p-news__block {
-  margin-top: rem(45);
+  margin-top: rem(26);
 }
 
 .p-news__item > a {
+  border-bottom: 1px solid #e3e3e3;
   display: flex;
   padding: rem(30) 0;
-  border-bottom: 1px solid #E3E3E3;
 }
 
 .p-news__title {
   display: inline-block;
+  font-size: rem(14);
+  line-height: 1;
   width: calc((92/335)*100%);
 }
 
@@ -23,4 +25,9 @@
 
 .p-news__button {
   margin-top: rem(50);
+}
+
+.p-news__body {
+  font-size: rem(14);
+  line-height: 1;
 }

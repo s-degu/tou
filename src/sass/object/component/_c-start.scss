@@ -1,0 +1,21 @@
+@use 'global' as*;
+
+.c-start {
+  background: #eaf0f9;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9000;
+}
+
+.c-start p {
+  display: none;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  z-index: 9999;
+}

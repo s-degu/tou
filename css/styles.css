@@ -291,8 +291,8 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .c-button--fv {
-    padding-top: 25px;
     padding-bottom: 25px;
+    padding-top: 25px;
   }
 }
 
@@ -315,11 +315,22 @@ select::-ms-expand {
   text-align: left;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .c-button--news {
+    font-size: 1rem;
+  }
+}
 .c-button--news::after {
   background-image: url(../../../images/arrow-news.svg);
   background-size: cover;
   right: 32px;
   width: 77.91px;
+}
+@media screen and (min-width: 768px) {
+  .c-button--news::after {
+    background-size: contain;
+    width: 50px;
+  }
 }
 
 .c-button--more,
@@ -381,6 +392,27 @@ select::-ms-expand {
   }
 }
 
+.c-start {
+  background: #eaf0f9;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9000;
+}
+
+.c-start p {
+  display: none;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 280px;
+  z-index: 9999;
+}
+
 body {
   padding-bottom: 78px;
 }
@@ -388,6 +420,32 @@ body {
   body {
     padding-bottom: 0;
   }
+}
+
+/* フェードイン(初期値) */
+.js-fadeUp {
+  opacity: 0;
+  /* 最初は非表示 */
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  /* 下に30pxの位置から */
+  -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+  transition: opacity 0.8s, -webkit-transform 0.8s;
+  transition: opacity 0.8s, transform 0.8s;
+  transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+  /* 透過率と縦方向の移動を0.8秒 */
+}
+
+/* フェードイン(スクロールした後) */
+.js-fadeUp.is-inview {
+  opacity: 1;
+  /* 表示領域に入ったら表示 */
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  /* 30px上に移動する */
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  /* フェード開始を0.5秒遅らせる */
 }
 
 .p-concept__content {
@@ -1215,6 +1273,10 @@ body {
   padding-bottom: 6.25rem;
 }
 
+.p-product__cards {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
 @media screen and (min-width: 768px) {
   .p-product__cards {
     display: -webkit-box;
@@ -1225,6 +1287,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .p-product-cards__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: calc(33.33333% - 40px);
   }
 }
@@ -1241,6 +1310,7 @@ body {
 }
 
 .p-product-card__img {
+  overflow: hidden;
   padding-top: 100%;
   position: relative;
 }
@@ -1250,7 +1320,16 @@ body {
   left: 0;
   position: absolute;
   top: 0;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
   width: 100%;
+}
+.p-product-card__img > img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  /* 拡大 */
 }
 
 .p-product__title {
@@ -1282,14 +1361,15 @@ body {
 .p-product-card__body {
   margin-top: 20px;
   margin-top: 1.25rem;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 .p-product-card__detail-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: auto;
 }
 
 .p-product-card__detail {
@@ -1480,6 +1560,109 @@ body {
   right: 15px;
 }
 
+/*リンクの形状*/
+#page-top a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #8e8eae;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 9.6px;
+  font-size: 0.6rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#page-top a:hover {
+  background: #8e8eae;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+#page-top.UpMove {
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
+}
+
+@-webkit-keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*　下に下がる動き　*/
+#page-top.DownMove {
+  -webkit-animation: DownAnime 0.5s forwards;
+          animation: DownAnime 0.5s forwards;
+}
+
+@-webkit-keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
 .test {
   font-size: 100px;
   font-size: 6.25rem;

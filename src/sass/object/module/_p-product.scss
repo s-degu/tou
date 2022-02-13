@@ -5,6 +5,7 @@
 }
 
 .p-product__cards {
+  margin-top: rem(40);
   @include mq("md") {
     display: flex;
   }
@@ -12,6 +13,8 @@
 
 .p-product-cards__item {
   @include mq("md") {
+    display: flex;
+    flex-direction: column;
     width: calc(100% / 3 - 60px * 2 / 3);
   }
 }
@@ -25,6 +28,8 @@
 }
 
 .p-product-card__img {
+  // cursor: pointer;
+  overflow: hidden;
   padding-top: 100%;
   position: relative;
 }
@@ -34,7 +39,11 @@
   left: 0;
   position: absolute;
   top: 0;
+  transition: transform .6s ease;
   width: 100%;
+  &:hover {
+    transform: scale(1.1);/* 拡大 */
+  }
 }
 
 .p-product__title {
@@ -58,11 +67,12 @@
 
 .p-product-card__body {
   margin-top: rem(20);
+  padding-bottom: rem(20);
 }
 
 .p-product-card__detail-block {
   display: flex;
-  margin-top: rem(20);
+  margin-top: auto;
 }
 
 .p-product-card__detail {

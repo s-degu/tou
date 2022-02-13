@@ -42,11 +42,11 @@
 }
 
 .c-button--fv {
-  max-width: rem(420);
   @include mq("md") {
-    padding-top: 25px;
     padding-bottom: 25px;
+    padding-top: 25px;
   }
+  max-width: rem(420);
 }
 
 .c-button--flow {
@@ -60,14 +60,21 @@
 
 .c-button--news {
   font-size: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+  }
   max-width: rem(320);
   text-align: left;
   width: 100%;
   &::after {
     background-image: url(../../../images/arrow-news.svg);
     background-size: cover;
+    @include mq("md") {
+      background-size: contain;
+      width: 50px;
+    }
     right: 32px;
-    width: 77.91px;;
+    width: 77.91px;
   }
 }
 

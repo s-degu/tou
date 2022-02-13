@@ -1,3 +1,5 @@
+@use 'global' as *;
+
 .c-down-arrow {
     // text-align: center;
   border-left: 18px solid transparent;
@@ -7,4 +9,7 @@
   height: 0;
   margin: 0 auto;
   width: 0;
+  @include mq("md") {
+    transform: rotate(-90deg);
+  }
 }

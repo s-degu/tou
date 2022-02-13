@@ -1,12 +1,29 @@
 @use 'global' as *;
 
+.p-price__set {
+  @include mq("md") {
+    margin-top: rem(49);
+  }
+}
+
 .p-set__content {
+  @include mq("md") {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(600);
+    width: 100%;
+    padding: 30px 24px 30px 30px;
+    border: 1px solid $purple;
+  }
   padding: 0 rem(16);
 }
 
 .p-set__title-wrap {
   margin-top: rem(38);
   text-align: center;
+  @include mq("md") {
+    margin-top: -42px;
+  }
 }
 
 .p-set__title {
@@ -16,6 +33,10 @@
   line-height: 1;
   padding: 0 75px;
   position: relative;
+  @include mq("md") {
+    background-color: $white;
+    padding: 0 30px;
+  }
 
   &::before,
   &::after {
@@ -27,6 +48,10 @@
     top: 50%;
     transform: translateY(-50%);
     width: 66px;
+    @include mq("md") {
+      content: none;
+      background-color: $white;
+    }
   }
   &::before {
     left: 0;
@@ -36,10 +61,22 @@
   }
 }
 
+.p-set__block {
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .p-set__img {
+  margin-top: rem(16);
   padding-top: calc((159.4/240)*100%);
   position: relative;
-  margin-top: rem(16);
+  @include mq("md") {
+    max-width: rem(241);
+    width: 100%;
+    padding-top: calc((160/544)*100%);
+  }
 }
 
 .p-set__img > img {
@@ -53,6 +90,10 @@
 
 .p-set__lists {
   margin-top: rem(20);
+  @include mq("md") {
+    margin-left: rem(30);
+    margin-top: 0;
+  }
 }
 
 .p-set__list {
@@ -65,20 +106,30 @@
 }
 
 .p-set__text {
+  // display: inline-block;
+  background-image: linear-gradient(transparent 70%,  #e6e6fa 0);;
   font-size: rem(18);
   line-height: 1;
   margin-top: rem(30);
-  // display: inline-block;
-  background-image: linear-gradient(transparent 70%,  #E6E6FA 0)
 }
 
 .p-set__button-wrap {
   margin-top: rem(35);
+  @include mq("md") {
+    text-align: center;
+  }
 }
 
 .p-set__button {
-  padding-left: rem(14);
   font-size: rem(14);
+  padding-left: rem(14);
+  @include mq("md") {
+    max-width: rem(420);
+    width: 100%;
+    font-size: rem(20);
+    text-align: left;
+    padding-left: rem(25);
+  }
   &::after {
     right: 15px;
   }

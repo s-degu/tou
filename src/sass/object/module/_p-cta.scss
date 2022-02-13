@@ -9,6 +9,10 @@
   position: fixed;
   right: 0;
   z-index: 10;
+  transition: opacity .3s;
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .p-cta__link {

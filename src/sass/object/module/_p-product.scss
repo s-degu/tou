@@ -5,10 +5,10 @@
 }
 
 .p-product__cards {
-  margin-top: rem(40);
   @include mq("md") {
     display: flex;
   }
+  margin-top: rem(40);
 }
 
 .p-product-cards__item {
@@ -28,6 +28,9 @@
 }
 
 .p-product-card__img {
+  @include mq("sm") {
+    padding-top: 65%;
+  }
   // cursor: pointer;
   overflow: hidden;
   padding-top: 100%;
@@ -36,7 +39,11 @@
 
 .p-product-card__img > img {
   height: 100%;
+  @include mq("md") {
+    object-fit: cover;
+  }
   left: 0;
+  object-fit: contain;
   position: absolute;
   top: 0;
   transition: transform .6s ease;
@@ -89,4 +96,5 @@
 
 .p-product__button {
   margin-top: rem(28);
+  text-align: center;
 }

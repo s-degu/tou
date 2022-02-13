@@ -32,9 +32,7 @@
 }
 
 .p-news__button {
-  @include mq("md") {
-    text-align: center;
-  }
+  text-align: center;
   margin-top: rem(50);
 }
 

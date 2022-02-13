@@ -1,10 +1,37 @@
 @use 'global' as *;
 
+.p-fv__wrap {
+  @include mq("md") {
+    background-image: url(../../../images/bg-fv.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+}
+
 .p-fv__img {
+  // margin: 0 calc(50% - 50vw);
+  // width: 100vw;
+  @include mq("md") {
+    margin-left: auto;
+    padding-top: calc((820/1440)*100%);
+    width: calc((925/1440)*100%);
+  }
   padding-top: calc((276/335)*100%);
   position: relative;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
+}
+
+.p-fv__title-box {
+  @include mq("md") {
+    left: calc((180/1440)*100%);
+    max-width: rem(527);
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
 }
 
 .p-fv__img > img {
@@ -19,6 +46,11 @@
 .p-fv__title {
   font-size: rem(30);
   font-weight: 400;
+  @include mq("md") {
+    font-size: rem(50);
+    line-height: calc(60/50);
+    margin-top: 0;
+  }
   letter-spacing: .06em;
   line-height: calc(36/30);
   margin-top: rem(20);
@@ -26,10 +58,61 @@
 
 .p-fv__sub-title {
   font-size: rem(16);
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: 1;
+    margin-top: rem(40);
+    white-space: nowrap;
+  }
   line-height: calc(24/16);
   margin-top: rem(6);
 }
 
 .p-fv__button {
+  @include mq("md") {
+    font-size: rem(20);
+  }
   margin-top: rem(20);
+}
+
+.p-fv__cta {
+  background-color: #eaf0f9;
+  bottom: 46px;
+  max-width: rem(387);
+  padding: 29px 0 28px 30px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.p-fv__cta > a {
+  display: block;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    background-image: url(../../../images/common/icon-cta.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80px;
+    left: -58px;
+    top: -100%;
+    width: 80px;
+  }
+
+  &::after {
+    background-image: url(../../../images/common/img-phone.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -15px;
+    height: rem(128);
+    right: 29px;
+    width: rem(70);
+  }
 }

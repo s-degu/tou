@@ -285,6 +285,17 @@ select::-ms-expand {
   width: 50px;
 }
 
+.c-button--fv {
+  max-width: 420px;
+  max-width: 26.25rem;
+}
+@media screen and (min-width: 768px) {
+  .c-button--fv {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
 .c-button--flow {
   max-width: 420px;
   max-width: 26.25rem;
@@ -757,11 +768,53 @@ body {
   }
 }
 
+.p-fv-cta__title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.p-fv-cta__text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  .p-fv__wrap {
+    background-image: url(../../../images/bg-fv.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+}
+
 .p-fv__img {
   padding-top: 82.3880597015%;
   position: relative;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .p-fv__img {
+    margin-left: auto;
+    padding-top: 56.9444444444%;
+    width: 64.2361111111%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-fv__title-box {
+    left: 12.5%;
+    max-width: 32.9375rem;
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100%;
+  }
 }
 
 .p-fv__img > img {
@@ -783,6 +836,13 @@ body {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
+@media screen and (min-width: 768px) {
+  .p-fv__title {
+    font-size: 3.125rem;
+    line-height: 1.2;
+    margin-top: 0;
+  }
+}
 
 .p-fv__sub-title {
   font-size: 16px;
@@ -791,10 +851,65 @@ body {
   margin-top: 6px;
   margin-top: 0.375rem;
 }
+@media screen and (min-width: 768px) {
+  .p-fv__sub-title {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-top: 2.5rem;
+    white-space: nowrap;
+  }
+}
 
 .p-fv__button {
   margin-top: 20px;
   margin-top: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .p-fv__button {
+    font-size: 1.25rem;
+  }
+}
+
+.p-fv__cta {
+  background-color: #eaf0f9;
+  bottom: 46px;
+  max-width: 387px;
+  max-width: 24.1875rem;
+  padding: 29px 0 28px 30px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.p-fv__cta > a {
+  display: block;
+  position: relative;
+}
+.p-fv__cta > a::before, .p-fv__cta > a::after {
+  content: "";
+  position: absolute;
+}
+.p-fv__cta > a::before {
+  background-image: url(../../../images/common/icon-cta.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+  left: -58px;
+  top: -100%;
+  width: 80px;
+}
+.p-fv__cta > a::after {
+  background-image: url(../../../images/common/img-phone.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: -15px;
+  height: 128px;
+  height: 8rem;
+  right: 29px;
+  width: 70px;
+  width: 4.375rem;
 }
 
 .p-header__wrap {

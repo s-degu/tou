@@ -41,6 +41,14 @@
   }
 }
 
+.c-button--fv {
+  max-width: rem(420);
+  @include mq("md") {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
 .c-button--flow {
   max-width: rem(420);
   padding-left: rem(16);

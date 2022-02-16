@@ -116,6 +116,10 @@
 
 .p-set__text--pc {
   display: inline-block;
+  margin-left: rem(-16);
+  @include mq("sm") {
+    margin-left: 0;
+  }
 }
 
 .p-set__button-wrap {

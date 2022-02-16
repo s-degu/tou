@@ -256,7 +256,7 @@ select::-ms-expand {
 }
 .c-button::after, .c-button--more::after,
 .c-button--news-list::after {
-  background-image: url(../../../images/common/button-arrow.svg);
+  background-image: url(../images/common/button-arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -285,7 +285,7 @@ select::-ms-expand {
   text-align: left;
 }
 .c-button--detail::after {
-  background-image: url(../../../images/arrow-detail.svg);
+  background-image: url(../images/arrow-detail.svg);
   background-size: cover;
   height: 6.28px;
   right: 31px;
@@ -329,7 +329,7 @@ select::-ms-expand {
   }
 }
 .c-button--news::after {
-  background-image: url(../../../images/arrow-news.svg);
+  background-image: url(../images/arrow-news.svg);
   background-size: cover;
   right: 32px;
   width: 77.91px;
@@ -849,7 +849,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .p-fv__wrap {
-    background-image: url(../../../images/bg-fv.jpg);
+    background-image: url(../images/bg-fv.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -955,7 +955,7 @@ body {
   position: absolute;
 }
 .p-fv__cta > a::before {
-  background-image: url(../../../images/common/icon-cta.png);
+  background-image: url(../images/common/icon-cta.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -965,7 +965,7 @@ body {
   width: 80px;
 }
 .p-fv__cta > a::after {
-  background-image: url(../../../images/common/img-phone.png);
+  background-image: url(../images/common/img-phone.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -992,7 +992,6 @@ body {
 @media screen and (min-width: 768px) {
   .p-header__logo {
     width: 101px;
-    margin-left: 155px;
   }
 }
 
@@ -1089,16 +1088,16 @@ body {
 }
 .p-price::after {
   bottom: 0;
-  font-size: 45px;
-  font-size: 2.8125rem;
-  line-height: 1;
   color: #fff;
   content: "TO U";
   display: block;
+  font-size: 45px;
+  font-size: 2.8125rem;
   left: 50%;
+  line-height: 1;
+  position: absolute;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  position: absolute;
 }
 @media screen and (min-width: 768px) {
   .p-price::after {
@@ -1208,6 +1207,26 @@ body {
   }
 }
 
+.p-price__price.normal {
+  position: relative;
+}
+.p-price__price.normal::after {
+  background-color: #e7a9ce;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 43%;
+  -webkit-transform: rotate(-13deg) translateY(-50%);
+          transform: rotate(-13deg) translateY(-50%);
+  width: 60%;
+}
+@media screen and (min-width: 768px) {
+  .p-price__price.normal::after {
+    width: 75%;
+  }
+}
+
 .p-price__unit {
   display: inline-block;
   font-size: 20px;
@@ -1260,7 +1279,7 @@ body {
   position: relative;
 }
 .p-price__special::after {
-  background-image: url(../../../images/label-free.png);
+  background-image: url(../images/label-free.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1350,11 +1369,6 @@ body {
   overflow: hidden;
   padding-top: 100%;
   position: relative;
-}
-@media screen and (min-width: 600px) {
-  .p-product-card__img {
-    padding-top: 65%;
-  }
 }
 
 .p-product-card__img > img {
@@ -1585,6 +1599,13 @@ body {
 
 .p-set__text--pc {
   display: inline-block;
+  margin-left: -16px;
+  margin-left: -1rem;
+}
+@media screen and (min-width: 600px) {
+  .p-set__text--pc {
+    margin-left: 0;
+  }
 }
 
 .p-set__button-wrap {

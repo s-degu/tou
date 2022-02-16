@@ -28,9 +28,9 @@
 }
 
 .p-product-card__img {
-  @include mq("sm") {
-    padding-top: 65%;
-  }
+  // @include mq("sm") {
+  //   padding-top: 65%;
+  // }
   // cursor: pointer;
   overflow: hidden;
   padding-top: 100%;

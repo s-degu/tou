@@ -7,17 +7,17 @@
   position: relative;
   &::after {
     bottom: 0;
-    font-size: rem(45);
-    line-height: 1;
     color: $white;
     content: "TO U";
     display: block;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
+    font-size: rem(45);
     @include mq("md") {
       content: none;
     }
+    left: 50%;
+    line-height: 1;
+    position: absolute;
+    transform: translateX(-50%);
   }
 }
 
@@ -95,6 +95,23 @@
   text-align: left;
 }
 
+.p-price__price.normal {
+  position: relative;
+  &::after {
+    background-color: #e7a9ce;
+    content: "";
+    height: 5px;
+    @include mq("md") {
+      width: 75%;
+    }
+    left: 0;
+    position: absolute;
+    top: 43%;
+    transform: rotate(-13deg) translateY(-50%);
+    width: 60%;
+  }
+}
+
 .p-price__unit {
   display: inline-block;
   font-size: rem(20);
@@ -131,7 +148,7 @@
   padding-left: rem(9);
   position: relative;
   &::after {
-    background-image: url(../../../images/label-free.png);
+    background-image: url(../images/label-free.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

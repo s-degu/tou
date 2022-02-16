@@ -2,7 +2,7 @@
 
 .p-fv__wrap {
   @include mq("md") {
-    background-image: url(../../../images/bg-fv.jpg);
+    background-image: url(../images/bg-fv.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -95,7 +95,7 @@
   }
 
   &::before {
-    background-image: url(../../../images/common/icon-cta.png);
+    background-image: url(../images/common/icon-cta.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,7 +106,7 @@
   }
 
   &::after {
-    background-image: url(../../../images/common/img-phone.png);
+    background-image: url(../images/common/img-phone.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
